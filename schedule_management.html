@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h2 {
+            margin-top: 50px;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        /* Add additional CSS for schedule management functionality */
+        /* Example:
+        .schedule-item {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        */
+    </style>
+</head>
+<body>
+    <h2>Schedule Management</h2>
+    <form action="{{ url_for('update_schedule') }}" method="post">
+        <label for="date">Select Date:</label><br>
+        <select id="date" name="date" required>
+            <option value="2024-04-01">April 1, 2024</option>
+            <option value="2024-04-02">April 2, 2024</option>
+            <!-- Add more options for other dates as needed -->
+        </select><br><br>
+        <label for="time_slot">Select Time Slot:</label><br>
+        <select id="time_slot" name="time_slot" required>
+            <option value="09:00-10:00">9:00 AM - 10:00 AM</option>
+            <option value="10:00-11:00">10:00 AM - 11:00 AM</option>
+            <!-- Add more options for other time slots as needed -->
+        </select><br><br>
+        <label for="employee">Select Employee:</label><br>
+        <select id="employee" name="employee" required>
+                <option value="employee1">employee1</option>
+                 <option value="employee2">employee2</option>
+        </select><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
