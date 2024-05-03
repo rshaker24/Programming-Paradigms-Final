@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Failed Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 50px;
+        }
+        p {
+            color: #555;
+            text-align: center;
+            margin: 20px auto;
+            max-width: 80%;
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-top: 50px;
+        }
+        form {
+            margin: 0 auto;
+            max-width: 80%;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Failed Login</h1>
+    <p>You have exceeded the maximum number of failed login attempts. Please contact support for assistance.</p>
+    <h2>Contact Support</h2>
+    <form id="contactForm" method="POST">
+        <!-- Modified form with an ID -->
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        // JavaScript to submit the form and redirect to the login page
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+            window.location.href = "/"; // Redirect to the login page
+        });
+    </script>
+</body>
+</html>
